@@ -1,0 +1,162 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--hp-font-weight-bold);
+  line-height: var(--hp-line-height-tight);
+  color: var(--hp-text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+  color: var(--hp-text-primary);
+  line-height: var(--hp-line-height-normal);
+}
+
+.hp-text-primary {
+  color: var(--hp-text-primary);
+}
+
+.hp-text-secondary {
+  color: var(--hp-text-secondary);
+}
+
+.hp-text-tertiary {
+  color: var(--hp-text-tertiary);
+}
+
+.hp-text-accent {
+  color: var(--hp-accent);
+}
+
+/* font weights */
+.hp-font-light {
+  font-weight: var(--hp-font-weight-light);
+}
+
+.hp-font-normal {
+  font-weight: var(--hp-font-weight-normal);
+}
+
+.hp-font-medium {
+  font-weight: var(--hp-font-weight-medium);
+}
+
+.hp-font-semibold {
+  font-weight: var(--hp-font-weight-semibold);
+}
+
+.hp-font-bold {
+  font-weight: var(--hp-font-weight-bold);
+}
+
+/* sizes */
+.hp-text-xs {
+  font-size: 0.75rem;
+}
+
+.hp-text-sm {
+  font-size: 0.875rem;
+}
+
+.hp-text-base {
+  font-size: 1rem;
+}
+
+.hp-text-lg {
+  font-size: 1.125rem;
+}
+
+.hp-text-xl {
+  font-size: 1.25rem;
+}
+
+/* alignment */
+.hp-text-center {
+  text-align: center;
+}
+
+.hp-text-left {
+  text-align: left;
+}
+
+.hp-text-right {
+  text-align: right;
+}
+
+.hp-text-justify {
+  text-align: justify;
+}
+
+/* additional */
+.hp-text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hp-text-lowercase {
+  text-transform: lowercase;
+}
+
+.hp-text-capitalize {
+  text-transform: capitalize;
+}
+
+.hp-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hp-text-muted {
+  opacity: 0.6;
+}
+
+.hp-text-strong {
+  font-weight: var(--hp-font-weight-bold);
+}
+
+code {
+  font-family: var(--hp-font-mono);
+  background-color: var(--hp-bg-tertiary);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--hp-radius-sm);
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--hp-bg-inverse);
+  color: var(--hp-text-inverse);
+  padding: var(--hp-spacing-lg);
+  border-radius: var(--hp-radius-lg);
+  overflow-x: auto;
+  font-family: var(--hp-font-mono);
+  font-size: 0.875rem;
+}

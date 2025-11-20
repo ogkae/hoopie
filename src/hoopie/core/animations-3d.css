@@ -1,0 +1,171 @@
+/* gpu-accelerated with smooth bezier timing */
+
+@keyframes hp-rotate-3d-x {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(180deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg);
+  }
+}
+
+@keyframes hp-rotate-3d-y {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+@keyframes hp-rotate-3d-z {
+  0% {
+    transform: perspective(1000px) rotateZ(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateZ(180deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateZ(360deg);
+  }
+}
+
+@keyframes hp-card-flip {
+  0% {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+@keyframes hp-wobble {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-5px) rotate(-3deg);
+  }
+  30% {
+    transform: translateX(4px) rotate(2deg);
+  }
+  45% {
+    transform: translateX(-4px) rotate(-2deg);
+  }
+  60% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  75% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+}
+
+@keyframes hp-swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hp-bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hp-elastic {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scaleX(0.9) scaleY(1.1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+}
+
+@keyframes hp-twist {
+  0% {
+    transform: perspective(1000px) rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes hp-tilt-in {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(90deg) rotateZ(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0) rotateZ(0);
+  }
+}
+
+/* animation utility classes */
+.hp-animate-rotate-3d-x {
+  animation: hp-rotate-3d-x 2s linear infinite;
+}
+.hp-animate-rotate-3d-y {
+  animation: hp-rotate-3d-y 2s linear infinite;
+}
+.hp-animate-rotate-3d-z {
+  animation: hp-rotate-3d-z 2s linear infinite;
+}
+.hp-animate-flip {
+  animation: hp-card-flip 0.6s ease-in-out;
+}
+.hp-animate-wobble {
+  animation: hp-wobble 1s ease-in-out;
+}
+.hp-animate-swing {
+  animation: hp-swing 0.6s ease-in-out;
+}
+.hp-animate-bounce-in {
+  animation: hp-bounce-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hp-animate-elastic {
+  animation: hp-elastic 0.8s ease-in-out;
+}
+.hp-animate-twist {
+  animation: hp-twist 1s ease-in-out;
+}
+.hp-animate-tilt-in {
+  animation: hp-tilt-in 0.8s ease-out;
+}

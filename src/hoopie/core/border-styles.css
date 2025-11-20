@@ -1,0 +1,132 @@
+/* border widths */
+.hp-border-0 {
+  border-width: 0;
+}
+
+.hp-border-1 {
+  border-width: 1px;
+}
+
+.hp-border-2 {
+  border-width: 2px;
+}
+
+.hp-border-4 {
+  border-width: 4px;
+}
+
+/* border styles */
+.hp-border-solid {
+  border-style: solid;
+}
+
+.hp-border-dashed {
+  border-style: dashed;
+}
+
+.hp-border-dotted {
+  border-style: dotted;
+}
+
+/* gradient borders */
+.hp-border-gradient {
+  position: relative;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.hp-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--hp-accent-primary), var(--hp-accent-secondary));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* animated border */
+.hp-border-animated {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--hp-bg-primary), var(--hp-bg-primary)) padding-box;
+}
+
+.hp-border-animated::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--hp-accent-primary), var(--hp-accent-secondary), var(--hp-accent-primary));
+  border-radius: inherit;
+  animation: hp-gradient-flow 3s ease infinite;
+  z-index: -1;
+}
+
+/* border colors */
+.hp-border-primary {
+  border-color: var(--hp-accent-primary);
+}
+
+.hp-border-secondary {
+  border-color: var(--hp-accent-secondary);
+}
+
+.hp-border-tertiary {
+  border-color: var(--hp-accent-tertiary);
+}
+
+.hp-border-success {
+  border-color: var(--hp-status-success-500);
+}
+
+.hp-border-warning {
+  border-color: var(--hp-status-warning-500);
+}
+
+.hp-border-error {
+  border-color: var(--hp-status-error-500);
+}
+
+.hp-border-info {
+  border-color: var(--hp-status-info-500);
+}
+
+/* rounded corners utilities */
+.hp-rounded-none {
+  border-radius: var(--hp-radius-none);
+}
+
+.hp-rounded-xs {
+  border-radius: var(--hp-radius-xs);
+}
+
+.hp-rounded-sm {
+  border-radius: var(--hp-radius-sm);
+}
+
+.hp-rounded-md {
+  border-radius: var(--hp-radius-md);
+}
+
+.hp-rounded-lg {
+  border-radius: var(--hp-radius-lg);
+}
+
+.hp-rounded-xl {
+  border-radius: var(--hp-radius-xl);
+}
+
+.hp-rounded-2xl {
+  border-radius: var(--hp-radius-2xl);
+}
+
+.hp-rounded-3xl {
+  border-radius: var(--hp-radius-3xl);
+}
+
+.hp-rounded-full {
+  border-radius: var(--hp-radius-full);
+}

@@ -1,0 +1,130 @@
+.hp-card {
+  background-color: var(--hp-bg-primary);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--hp-radius-xl);
+  padding: var(--hp-spacing-lg);
+  transition: all var(--hp-transition-base);
+  box-shadow: var(--hp-shadow-sm);
+}
+
+.hp-card:hover {
+  box-shadow: var(--hp-shadow-lg);
+  border-color: var(--hp-accent-lighter);
+}
+
+/* elevated variant */
+.hp-card-elevated {
+  box-shadow: var(--hp-shadow-lg);
+}
+
+.hp-card-elevated:hover {
+  box-shadow: var(--hp-shadow-xl);
+  transform: translateY(-4px);
+}
+
+/* flat variant */
+.hp-card-flat {
+  box-shadow: none;
+  border: 1px solid var(--hp-border);
+}
+
+.hp-card-flat:hover {
+  box-shadow: none;
+  background-color: var(--hp-bg-secondary);
+}
+
+/* ghost variant */
+.hp-card-ghost {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.hp-card-ghost:hover {
+  background-color: var(--hp-bg-tertiary);
+}
+
+/* glass variant */
+.hp-card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--hp-shadow-glass);
+}
+
+.hp-card-glass:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* colored variants */
+.hp-card-primary {
+  background-color: var(--hp-accent);
+  color: white;
+  border: none;
+}
+
+.hp-card-secondary {
+  background-color: var(--hp-secondary);
+  color: white;
+  border: none;
+}
+
+/* sizing */
+.hp-card-sm {
+  padding: var(--hp-spacing-md);
+}
+
+.hp-card-lg {
+  padding: var(--hp-spacing-2xl);
+}
+
+.hp-card-xl {
+  padding: var(--hp-spacing-3xl);
+}
+
+/* card header */
+.hp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--hp-spacing-lg);
+  padding-bottom: var(--hp-spacing-lg);
+  border-bottom: 1px solid var(--hp-border);
+}
+
+.hp-card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: var(--hp-font-weight-semibold);
+}
+
+/* card body */
+.hp-card-body {
+  margin-bottom: var(--hp-spacing-lg);
+}
+
+/* card footer */
+.hp-card-footer {
+  display: flex;
+  gap: var(--hp-spacing-md);
+  padding-top: var(--hp-spacing-lg);
+  border-top: 1px solid var(--hp-border);
+  justify-content: flex-end;
+}
+
+/* image card */
+.hp-card-image {
+  overflow: hidden;
+  border-radius: var(--hp-radius-xl);
+}
+
+.hp-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--hp-transition-base);
+}
+
+.hp-card:hover .hp-card-image img {
+  transform: scale(1.05);
+}

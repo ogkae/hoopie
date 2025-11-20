@@ -1,0 +1,85 @@
+.hp-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.hp-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hp-spacing-sm);
+  padding: var(--hp-spacing-md) var(--hp-spacing-lg);
+  background: var(--hp-bg-secondary);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--hp-radius-lg);
+  cursor: pointer;
+  transition: all var(--hp-transition-sm);
+  font-weight: var(--hp-fw-medium);
+}
+
+.hp-dropdown__trigger:hover {
+  background: var(--hp-bg-tertiary);
+  border-color: var(--hp-accent-primary);
+}
+
+.hp-dropdown__trigger::after {
+  content: "";
+  width: 0.375rem;
+  height: 0.375rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform var(--hp-transition-sm);
+}
+
+.hp-dropdown__trigger.hp-active::after {
+  transform: rotate(-135deg);
+}
+
+/* dropdown menu */
+.hp-dropdown__menu {
+  position: absolute;
+  top: calc(100% + var(--hp-spacing-sm));
+  left: 0;
+  background: var(--hp-bg-primary);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--hp-radius-lg);
+  box-shadow: var(--hp-shadow-lg);
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+  transition: all var(--hp-transition-sm);
+  z-index: var(--hp-z-dropdown);
+  list-style: none;
+  margin: 0;
+  padding: var(--hp-spacing-md) 0;
+}
+
+.hp-dropdown__menu.hp-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hp-dropdown__item {
+  padding: var(--hp-spacing-sm) var(--hp-spacing-lg);
+  color: var(--hp-text-secondary);
+  cursor: pointer;
+  transition: all var(--hp-transition-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--hp-spacing-md);
+  font-size: var(--hp-text-sm);
+}
+
+.hp-dropdown__item:hover {
+  background: var(--hp-bg-secondary);
+  color: var(--hp-accent-primary);
+  padding-left: calc(var(--hp-spacing-lg) + 4px);
+}
+
+.hp-dropdown__divider {
+  height: 1px;
+  background: var(--hp-border);
+  margin: var(--hp-spacing-sm) 0;
+}

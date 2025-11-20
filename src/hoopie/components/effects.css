@@ -1,0 +1,145 @@
+/* glassmorphism */
+.hp-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hp-glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* gradients */
+.hp-gradient-primary {
+  background: linear-gradient(135deg, var(--hp-accent), var(--hp-secondary));
+}
+
+.hp-gradient-warm {
+  background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+}
+
+.hp-gradient-cool {
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+}
+
+.hp-gradient-text {
+  background: linear-gradient(135deg, var(--hp-accent), var(--hp-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* blur effects */
+.hp-blur-sm {
+  filter: blur(4px);
+}
+
+.hp-blur-md {
+  filter: blur(8px);
+}
+
+.hp-blur-lg {
+  filter: blur(12px);
+}
+
+/* 3d transforms */
+.hp-perspective {
+  perspective: 1000px;
+}
+
+.hp-rotate-x {
+  transform: rotateX(45deg);
+}
+
+.hp-rotate-y {
+  transform: rotateY(45deg);
+}
+
+.hp-rotate-z {
+  transform: rotateZ(45deg);
+}
+
+/* parallax effect */
+.hp-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+/* hover lift effect */
+.hp-lift {
+  transition: all var(--hp-transition-base);
+}
+
+.hp-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hp-shadow-xl);
+}
+
+/* glow effect */
+.hp-glow {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.hp-glow-secondary {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.hp-glow-success {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+/* background animations */
+.hp-gradient-animate {
+  background-size: 200% 200%;
+  animation: hp-gradient-shift 3s ease infinite;
+}
+
+/* border animations */
+@keyframes hp-border-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 1);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.hp-border-glow {
+  animation: hp-border-glow 2s ease-in-out infinite;
+}
+
+/* floating animation */
+@keyframes hp-float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hp-float {
+  animation: hp-float 3s ease-in-out infinite;
+}
+
+/* mirror effect */
+.hp-mirror-x {
+  transform: scaleX(-1);
+}
+
+.hp-mirror-y {
+  transform: scaleY(-1);
+}

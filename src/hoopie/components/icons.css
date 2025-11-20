@@ -1,0 +1,85 @@
+.hp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1em;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+}
+
+.hp-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  transition: all var(--hp-transition-fast) ease-out;
+}
+
+/* size variants */
+.hp-icon--sm {
+  font-size: 1rem;
+}
+
+.hp-icon--md {
+  font-size: 1.5rem;
+}
+
+.hp-icon--lg {
+  font-size: 2rem;
+}
+
+.hp-icon--xl {
+  font-size: 3rem;
+}
+
+/* color variants */
+.hp-icon--brand {
+  color: var(--hp-brand);
+}
+
+.hp-icon--danger {
+  color: var(--hp-danger);
+}
+
+.hp-icon--success {
+  color: var(--hp-success);
+}
+
+.hp-icon--warning {
+  color: var(--hp-warning);
+}
+
+.hp-icon--info {
+  color: var(--hp-info);
+}
+
+/* animated variants */
+.hp-icon--spin {
+  animation: hp-spin 1s linear infinite;
+}
+
+.hp-icon--bounce {
+  animation: hp-bounce 1s ease-in-out infinite;
+}
+
+.hp-icon--pulse {
+  animation: hp-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* hover effects */
+.hp-icon--hover-rotate {
+  transition: transform var(--hp-transition-fast) ease-out;
+}
+
+.hp-icon--hover-rotate:hover {
+  transform: rotate(180deg);
+}
+
+.hp-icon--hover-scale:hover {
+  transform: scale(1.2);
+}
+
+.hp-icon--hover-bounce:hover {
+  animation: hp-bounce var(--hp-transition-fast) ease-in-out;
+}

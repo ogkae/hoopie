@@ -1,0 +1,107 @@
+.hp-alert {
+  display: flex;
+  gap: var(--hp-spacing-md);
+  padding: var(--hp-spacing-lg);
+  border-radius: var(--hp-radius-lg);
+  border: 1px solid;
+  font-size: 0.95rem;
+  animation: hp-slide-up var(--hp-transition-base);
+}
+
+/* primary variant */
+.hp-alert-primary {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: var(--hp-accent-dark);
+}
+
+/* success variant */
+.hp-alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #047857;
+}
+
+/* warning variant */
+.hp-alert-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #92400e;
+}
+
+/* error variant */
+.hp-alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #7f1d1d;
+}
+
+/* info variant */
+.hp-alert-info {
+  background-color: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  color: #0e7490;
+}
+
+/* solid variants */
+.hp-alert-solid-primary {
+  background-color: var(--hp-accent);
+  border-color: var(--hp-accent-dark);
+  color: white;
+}
+
+.hp-alert-solid-success {
+  background-color: var(--hp-success);
+  border-color: #059669;
+  color: white;
+}
+
+.hp-alert-solid-warning {
+  background-color: var(--hp-warning);
+  border-color: #d97706;
+  color: white;
+}
+
+.hp-alert-solid-error {
+  background-color: var(--hp-error);
+  border-color: #dc2626;
+  color: white;
+}
+
+/* alert content */
+.hp-alert-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.hp-alert-content {
+  flex: 1;
+}
+
+.hp-alert-title {
+  font-weight: var(--hp-font-weight-semibold);
+  margin-bottom: 0.25rem;
+}
+
+.hp-alert-description {
+  opacity: 0.9;
+  font-size: 0.875rem;
+}
+
+/* close button */
+.hp-alert-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--hp-transition-fast);
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.hp-alert-close:hover {
+  opacity: 1;
+}

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Inter+Tight:wght@700;800;900&family=Fira+Code:wght@400;500;600&display=swap");
+
+html {
+  font-family: var(--hp-font-ui);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* heading styles */
+h1,
+.hp-h1 {
+  font-family: var(--hp-font-display);
+  font-size: var(--hp-text-5xl);
+  font-weight: 900;
+  line-height: var(--hp-line-height-tight);
+  letter-spacing: var(--hp-tracking-tighter);
+  color: var(--hp-text-primary);
+}
+
+h2,
+.hp-h2 {
+  font-size: var(--hp-text-4xl);
+  font-weight: 800;
+  line-height: var(--hp-line-height-tight);
+  letter-spacing: var(--hp-tracking-tighter);
+}
+
+h3,
+.hp-h3 {
+  font-size: var(--hp-text-3xl);
+  font-weight: 700;
+  line-height: var(--hp-line-height-normal);
+}
+
+h4,
+.hp-h4 {
+  font-size: var(--hp-text-2xl);
+  font-weight: 600;
+  line-height: var(--hp-line-height-normal);
+}
+
+h5,
+.hp-h5 {
+  font-size: var(--hp-text-xl);
+  font-weight: 600;
+}
+
+h6,
+.hp-h6 {
+  font-size: var(--hp-text-lg);
+  font-weight: 600;
+}
+
+/* body text variants */
+p,
+.hp-body {
+  font-size: var(--hp-text-base);
+  line-height: var(--hp-line-height-relaxed);
+  color: var(--hp-text-secondary);
+}
+
+.hp-body-sm {
+  font-size: var(--hp-text-sm);
+  line-height: var(--hp-line-height-normal);
+}
+
+.hp-body-lg {
+  font-size: var(--hp-text-lg);
+  line-height: var(--hp-line-height-relaxed);
+}
+
+/* code and monospace */
+code,
+.hp-code {
+  font-family: var(--hp-font-mono);
+  font-size: var(--hp-text-sm);
+  background: var(--hp-bg-secondary);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--hp-radius-md);
+  color: var(--hp-brand);
+}
+
+/* text utilities */
+.hp-font-light {
+  font-weight: var(--hp-font-weight-light);
+}
+
+.hp-font-normal {
+  font-weight: var(--hp-font-weight-normal);
+}
+
+.hp-font-medium {
+  font-weight: var(--hp-font-weight-medium);
+}
+
+.hp-font-semibold {
+  font-weight: var(--hp-font-weight-semibold);
+}
+
+.hp-font-bold {
+  font-weight: var(--hp-font-weight-bold);
+}
+
+.hp-tracking-tight {
+  letter-spacing: var(--hp-tracking-tight);
+}
+
+.hp-tracking-wide {
+  letter-spacing: var(--hp-tracking-wide);
+}
+
+.hp-text-center {
+  text-align: center;
+}
+
+.hp-text-right {
+  text-align: right;
+}
+
+.hp-text-left {
+  text-align: left;
+}
+
+/* text balance for better line breaking */
+.hp-text-balance {
+  text-wrap: balance;
+}
+
+.hp-text-pretty {
+  text-wrap: pretty;
+}

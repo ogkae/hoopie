@@ -1,0 +1,68 @@
+.hp-progress {
+  width: 100%;
+  height: 0.5rem;
+  background: var(--hp-bg-secondary);
+  border-radius: var(--hp-radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.hp-progress__bar {
+  height: 100%;
+  background: var(--hp-accent-primary);
+  border-radius: var(--hp-radius-full);
+  transition: width var(--hp-transition-md);
+  position: relative;
+}
+
+/* animated variant */
+.hp-progress__bar.hp-animated {
+  background: linear-gradient(90deg, var(--hp-accent-primary), var(--hp-accent-secondary), var(--hp-accent-primary));
+  background-size: 200% 100%;
+  animation: hp-gradient-flow 2s ease infinite;
+}
+
+/* size variants */
+.hp-progress--sm {
+  height: 0.25rem;
+}
+
+.hp-progress--lg {
+  height: 0.75rem;
+}
+
+.hp-progress--xl {
+  height: 1rem;
+}
+
+/* color variants */
+.hp-progress--success .hp-progress__bar {
+  background: var(--hp-status-success-500);
+}
+
+.hp-progress--warning .hp-progress__bar {
+  background: var(--hp-status-warning-500);
+}
+
+.hp-progress--error .hp-progress__bar {
+  background: var(--hp-status-error-500);
+}
+
+.hp-progress--info .hp-progress__bar {
+  background: var(--hp-status-info-500);
+}
+
+/* with label */
+.hp-progress-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hp-spacing-md);
+}
+
+.hp-progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--hp-text-sm);
+  font-weight: var(--hp-fw-medium);
+}

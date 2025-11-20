@@ -1,0 +1,87 @@
+/* glassmorphism effect */
+.hp-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--hp-shadow-glass);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hp-glass {
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* gradient backgrounds */
+.hp-gradient-primary {
+  background: linear-gradient(135deg, var(--hp-brand) 0%, var(--hp-brand-dark) 100%);
+}
+
+.hp-gradient-accent {
+  background: linear-gradient(135deg, var(--hp-accent) 0%, var(--hp-secondary) 100%);
+}
+
+.hp-gradient-animated {
+  background: linear-gradient(45deg, var(--hp-brand), var(--hp-brand-alt), var(--hp-brand));
+  background-size: 200% 200%;
+  animation: hp-gradient-flow 6s ease infinite;
+}
+
+/* blur effects */
+.hp-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.hp-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+.hp-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+/* depth and elevation */
+.hp-depth-sm {
+  box-shadow: var(--hp-shadow-elevation-1);
+}
+
+.hp-depth-md {
+  box-shadow: var(--hp-shadow-elevation-2);
+}
+
+.hp-depth-lg {
+  box-shadow: var(--hp-shadow-elevation-3);
+}
+
+.hp-depth-xl {
+  box-shadow: var(--hp-shadow-elevation-4);
+}
+
+/* glow effects */
+.hp-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.hp-glow-lg {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+/* border effects */
+.hp-border-gradient {
+  position: relative;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+.hp-border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--hp-brand), var(--hp-accent));
+  border-radius: inherit;
+  z-index: -1;
+}

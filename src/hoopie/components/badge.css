@@ -1,0 +1,113 @@
+.hp-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--hp-spacing-xs) var(--hp-spacing-md);
+  border-radius: var(--hp-radius-full);
+  font-size: 0.75rem;
+  font-weight: var(--hp-font-weight-semibold);
+  transition: all var(--hp-transition-fast);
+  gap: var(--hp-spacing-xs);
+}
+
+/* solid variants */
+.hp-badge-primary {
+  background-color: var(--hp-accent);
+  color: white;
+}
+
+.hp-badge-primary:hover {
+  background-color: var(--hp-accent-dark);
+}
+
+.hp-badge-secondary {
+  background-color: var(--hp-secondary);
+  color: white;
+}
+
+.hp-badge-secondary:hover {
+  background-color: var(--hp-secondary-dark);
+}
+
+.hp-badge-success {
+  background-color: var(--hp-success);
+  color: white;
+}
+
+.hp-badge-warning {
+  background-color: var(--hp-warning);
+  color: white;
+}
+
+.hp-badge-error {
+  background-color: var(--hp-error);
+  color: white;
+}
+
+.hp-badge-info {
+  background-color: var(--hp-info);
+  color: white;
+}
+
+/* soft variants */
+.hp-badge-soft-primary {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--hp-accent);
+}
+
+.hp-badge-soft-secondary {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: var(--hp-secondary);
+}
+
+.hp-badge-soft-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--hp-success);
+}
+
+.hp-badge-soft-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--hp-warning);
+}
+
+.hp-badge-soft-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--hp-error);
+}
+
+/* outline variants */
+.hp-badge-outline {
+  background-color: transparent;
+  border: 1px solid var(--hp-border);
+  color: var(--hp-text-primary);
+}
+
+.hp-badge-outline-primary {
+  background-color: transparent;
+  border: 1px solid var(--hp-accent);
+  color: var(--hp-accent);
+}
+
+/* sizes */
+.hp-badge-sm {
+  padding: var(--hp-spacing-xs) var(--hp-spacing-sm);
+  font-size: 0.65rem;
+}
+
+.hp-badge-lg {
+  padding: var(--hp-spacing-sm) var(--hp-spacing-lg);
+  font-size: 0.875rem;
+}
+
+/* with icon */
+.hp-badge-icon {
+  display: inline-flex;
+  gap: var(--hp-spacing-xs);
+}
+
+.hp-badge-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}

@@ -1,0 +1,12 @@
+[data-theme="vivid"] {
+  --hp-accent-primary: #ff0080;
+  --hp-accent-secondary: #ff6ec7;
+  --hp-accent-tertiary: #f100ff;
+
+  --hp-brand-500: #ff0080;
+  --hp-brand-600: #e60073;
+  --hp-brand-700: #cc0066;
+
+  --hp-shadow-glow: 0 0 40px rgba(255, 0, 128, 0.35);
+  --hp-shadow-glow-accent: 0 0 50px rgba(241, 0, 255, 0.3);
+}

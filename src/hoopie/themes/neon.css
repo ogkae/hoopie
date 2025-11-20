@@ -1,0 +1,21 @@
+/* experimental */
+[data-theme="neon"] {
+  --hp-primary: #0a0a0a;
+  --hp-accent: #d400ff;
+  --hp-secondary: #00ffff;
+  --hp-success: #00ff88;
+  --hp-warning: #ffaa00;
+  --hp-error: #ff0055;
+  --hp-info: #00ccff;
+
+  --hp-bg-primary: #0a0a0a;
+  --hp-bg-secondary: #1a1a2e;
+  --hp-bg-tertiary: #2a2a3e;
+
+  --hp-text-primary: #ffffff;
+  --hp-text-secondary: #c0c0ff;
+  --hp-text-tertiary: #808080;
+
+  --hp-border: #333366;
+  --hp-shadow-glass: 0 8px 32px rgba(212, 0, 255, 0.2);
+}

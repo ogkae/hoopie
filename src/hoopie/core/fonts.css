@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;600&family=DM+Mono:wght@300;400;500&family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --hp-font-sans: "Inter", -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, sans-serif;
+  --hp-font-serif: "Playfair Display", "Georgia Pro", georgia, serif;
+  --hp-font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --hp-font-mono-alt: "IBM Plex Mono", "Courier New", monospace;
+  --hp-font-display: "Playfair Display", "Georgia Pro", serif;
+  --hp-font-code: "Fira Code", "JetBrains Mono", monospace;
+
+  /* responsive type scale with clamp */
+  --hp-type-scale-1: clamp(0.625rem, 0.5vw, 0.75rem);
+  --hp-type-scale-2: clamp(0.75rem, 0.75vw, 0.875rem);
+  --hp-type-scale-3: clamp(0.875rem, 1vw, 1rem);
+  --hp-type-scale-4: clamp(1rem, 1.25vw, 1.125rem);
+  --hp-type-scale-5: clamp(1.125rem, 1.5vw, 1.25rem);
+  --hp-type-scale-6: clamp(1.25rem, 2vw, 1.5rem);
+  --hp-type-scale-7: clamp(1.5rem, 2.5vw, 1.875rem);
+  --hp-type-scale-8: clamp(1.875rem, 3vw, 2.25rem);
+  --hp-type-scale-9: clamp(2.25rem, 4vw, 2.75rem);
+  --hp-type-scale-10: clamp(2.75rem, 5vw, 3.5rem);
+  --hp-type-scale-11: clamp(3.5rem, 6vw, 4.5rem);
+
+  /* font weights with semantic names */
+  --hp-fw-thin: 100;
+  --hp-fw-extralight: 200;
+  --hp-fw-light: 300;
+  --hp-fw-normal: 400;
+  --hp-fw-medium: 500;
+  --hp-fw-semibold: 600;
+  --hp-fw-bold: 700;
+  --hp-fw-extrabold: 800;
+  --hp-fw-black: 900;
+
+  /* line height scale */
+  --hp-lh-tight: 1.125;
+  --hp-lh-snug: 1.25;
+  --hp-lh-normal: 1.5;
+  --hp-lh-relaxed: 1.625;
+  --hp-lh-loose: 1.75;
+  --hp-lh-extra-loose: 2;
+
+  /* letter spacing */
+  --hp-ls-tighter: -0.05em;
+  --hp-ls-tight: -0.025em;
+  --hp-ls-normal: 0;
+  --hp-ls-wide: 0.025em;
+  --hp-ls-wider: 0.05em;
+  --hp-ls-widest: 0.1em;
+
+  /* text decoration styles */
+  --hp-text-decoration-thickness: 0.125em;
+  --hp-text-underline-offset: 0.25em;
+}
+
+/* base typography reset */
+body {
+  font-family: var(--hp-font-sans);
+  font-size: var(--hp-type-scale-4);
+  line-height: var(--hp-lh-normal);
+  color: var(--hp-text-primary);
+  background-color: var(--hp-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* heading styles */
+h1,
+.hp-h1 {
+  font-family: var(--hp-font-display);
+  font-size: var(--hp-type-scale-11);
+  font-weight: var(--hp-fw-bold);
+  line-height: var(--hp-lh-tight);
+  letter-spacing: var(--hp-ls-tight);
+  margin: 0;
+}
+
+h2,
+.hp-h2 {
+  font-family: var(--hp-font-display);
+  font-size: var(--hp-type-scale-9);
+  font-weight: var(--hp-fw-bold);
+  line-height: var(--hp-lh-snug);
+  margin: 0;
+}
+
+h3,
+.hp-h3 {
+  font-family: var(--hp-font-display);
+  font-size: var(--hp-type-scale-7);
+  font-weight: var(--hp-fw-semibold);
+  line-height: var(--hp-lh-snug);
+  margin: 0;
+}
+
+h4,
+.hp-h4 {
+  font-family: var(--hp-font-sans);
+  font-size: var(--hp-type-scale-6);
+  font-weight: var(--hp-fw-semibold);
+  line-height: var(--hp-lh-normal);
+  margin: 0;
+}
+
+h5,
+.hp-h5 {
+  font-family: var(--hp-font-sans);
+  font-size: var(--hp-type-scale-5);
+  font-weight: var(--hp-fw-semibold);
+  margin: 0;
+}
+
+h6,
+.hp-h6 {
+  font-family: var(--hp-font-sans);
+  font-size: var(--hp-type-scale-4);
+  font-weight: var(--hp-fw-semibold);
+  margin: 0;
+}
+
+/* paragraph and body text */
+p,
+.hp-p {
+  font-size: var(--hp-type-scale-4);
+  line-height: var(--hp-lh-relaxed);
+  margin: 0;
+}
+
+small,
+.hp-small {
+  font-size: var(--hp-type-scale-3);
+}
+
+.hp-text-caption {
+  font-size: var(--hp-type-scale-2);
+  font-weight: var(--hp-fw-medium);
+  letter-spacing: var(--hp-ls-wide);
+  text-transform: uppercase;
+  color: var(--hp-text-tertiary);
+}
+
+.hp-text-overline {
+  font-size: var(--hp-type-scale-1);
+  font-weight: var(--hp-fw-bold);
+  letter-spacing: var(--hp-ls-widest);
+  text-transform: uppercase;
+  color: var(--hp-text-tertiary);
+}
+
+/* monospace styles */
+.hp-text-mono,
+code,
+pre {
+  font-family: var(--hp-font-mono);
+  font-size: var(--hp-type-scale-3);
+}
+
+code {
+  font-weight: var(--hp-fw-medium);
+  background-color: var(--hp-bg-secondary);
+  padding: 0.125em 0.375em;
+  border-radius: var(--hp-radius-sm);
+  color: var(--hp-status-error-500);
+}
+
+pre {
+  background-color: var(--hp-bg-secondary);
+  padding: var(--hp-spacing-md);
+  border-radius: var(--hp-radius-lg);
+  overflow-x: auto;
+  line-height: var(--hp-lh-normal);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* semantic text styles */
+strong,
+.hp-strong {
+  font-weight: var(--hp-fw-bold);
+}
+
+em,
+.hp-em {
+  font-style: italic;
+}
+
+.hp-text-serif {
+  font-family: var(--hp-font-serif);
+}
+
+.hp-text-display {
+  font-family: var(--hp-font-display);
+}
+
+/* font weight utilities */
+.hp-fw-thin {
+  font-weight: var(--hp-fw-thin);
+}
+
+.hp-fw-light {
+  font-weight: var(--hp-fw-light);
+}
+
+.hp-fw-normal {
+  font-weight: var(--hp-fw-normal);
+}
+
+.hp-fw-medium {
+  font-weight: var(--hp-fw-medium);
+}
+
+.hp-fw-semibold {
+  font-weight: var(--hp-fw-semibold);
+}
+
+.hp-fw-bold {
+  font-weight: var(--hp-fw-bold);
+}
+
+.hp-fw-extrabold {
+  font-weight: var(--hp-fw-extrabold);
+}
+
+.hp-fw-black {
+  font-weight: var(--hp-fw-black);
+}
+
+/* line height utilities */
+.hp-lh-tight {
+  line-height: var(--hp-lh-tight);
+}
+
+.hp-lh-normal {
+  line-height: var(--hp-lh-normal);
+}
+
+.hp-lh-relaxed {
+  line-height: var(--hp-lh-relaxed);
+}
+
+.hp-lh-loose {
+  line-height: var(--hp-lh-loose);
+}
+
+/* text transform utilities */
+.hp-uppercase {
+  text-transform: uppercase;
+}
+
+.hp-lowercase {
+  text-transform: lowercase;
+}
+
+.hp-capitalize {
+  text-transform: capitalize;
+}
+
+.hp-normal-case {
+  text-transform: none;
+}
+
+/* text truncation */
+.hp-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hp-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hp-line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

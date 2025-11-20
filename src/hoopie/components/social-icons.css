@@ -1,0 +1,200 @@
+.hp-social-icons {
+  display: flex;
+  gap: var(--hp-spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* base social icon style */
+.hp-social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--hp-radius-lg);
+  background: var(--hp-bg-secondary);
+  color: var(--hp-text-primary);
+  text-decoration: none;
+  transition: all var(--hp-transition-sm);
+  font-size: var(--hp-text-lg);
+  border: 1px solid var(--hp-border);
+}
+
+.hp-social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--hp-shadow-lg);
+}
+
+/* twitter/x */
+.hp-social-icon--twitter {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.hp-social-icon--twitter:hover {
+  background: #1da1f2;
+  color: white;
+}
+
+/* x (new branding) */
+.hp-social-icon--x {
+  color: #000;
+  border-color: #000;
+}
+
+.hp-social-icon--x:hover {
+  background: #000;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hp-social-icon--x {
+    color: #fff;
+    border-color: #fff;
+  }
+
+  .hp-social-icon--x:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+/* github */
+.hp-social-icon--github {
+  color: #333;
+  border-color: #333;
+}
+
+.hp-social-icon--github:hover {
+  background: #333;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hp-social-icon--github {
+    color: #fff;
+    border-color: #fff;
+  }
+
+  .hp-social-icon--github:hover {
+    background: #fff;
+    color: #333;
+  }
+}
+
+/* linkedin */
+.hp-social-icon--linkedin {
+  color: #0a66c2;
+  border-color: #0a66c2;
+}
+
+.hp-social-icon--linkedin:hover {
+  background: #0a66c2;
+  color: white;
+}
+
+/* discord */
+.hp-social-icon--discord {
+  color: #5865f2;
+  border-color: #5865f2;
+}
+
+.hp-social-icon--discord:hover {
+  background: #5865f2;
+  color: white;
+}
+
+/* youtube */
+.hp-social-icon--youtube {
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+.hp-social-icon--youtube:hover {
+  background: #ff0000;
+  color: white;
+}
+
+/* instagram */
+.hp-social-icon--instagram {
+  color: #e4405f;
+  border-color: #e4405f;
+}
+
+.hp-social-icon--instagram:hover {
+  background: #e4405f;
+  color: white;
+}
+
+/* epic games */
+.hp-social-icon--epicgames {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.hp-social-icon--epicgames:hover {
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hp-social-icon--epicgames {
+    color: #ccc;
+    border-color: #ccc;
+  }
+
+  .hp-social-icon--epicgames:hover {
+    background: linear-gradient(135deg, #ccc, #aaa);
+    color: #000;
+  }
+}
+
+/* size variants */
+.hp-social-icon--sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--hp-text-sm);
+}
+
+.hp-social-icon--lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--hp-text-xl);
+}
+
+/* filled variant */
+.hp-social-icon--filled {
+  background: var(--hp-text-primary);
+  color: white;
+  border: none;
+}
+
+.hp-social-icon--filled--twitter {
+  background: #1da1f2;
+}
+
+.hp-social-icon--filled--github {
+  background: #333;
+}
+
+.hp-social-icon--filled--linkedin {
+  background: #0a66c2;
+}
+
+.hp-social-icon--filled--discord {
+  background: #5865f2;
+}
+
+.hp-social-icon--filled--youtube {
+  background: #ff0000;
+}
+
+.hp-social-icon--filled--instagram {
+  background: #e4405f;
+}
+
+.hp-social-icon--filled--epicgames {
+  background: #1a1a1a;
+}

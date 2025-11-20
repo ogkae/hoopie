@@ -1,0 +1,92 @@
+.hp-spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--hp-bg-tertiary);
+  border-top-color: var(--hp-accent);
+  border-radius: 50%;
+  animation: hp-spin 1s linear infinite;
+}
+
+/* sizes */
+.hp-spinner-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 2px;
+}
+
+.hp-spinner-lg {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-width: 4px;
+}
+
+.hp-spinner-xl {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-width: 4px;
+}
+
+/* colors */
+.hp-spinner-primary {
+  border-top-color: var(--hp-accent);
+}
+
+.hp-spinner-secondary {
+  border-top-color: var(--hp-secondary);
+}
+
+.hp-spinner-success {
+  border-top-color: var(--hp-success);
+}
+
+.hp-spinner-error {
+  border-top-color: var(--hp-error);
+}
+
+/* dot spinner */
+.hp-spinner-dots {
+  display: inline-flex;
+  gap: var(--hp-spacing-sm);
+  align-items: center;
+}
+
+.hp-spinner-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--hp-accent);
+  animation: hp-pulse 1.4s ease-in-out infinite;
+}
+
+.hp-spinner-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.hp-spinner-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* skeleton */
+.hp-skeleton {
+  background: linear-gradient(90deg, var(--hp-bg-tertiary) 0%, var(--hp-bg-secondary) 50%, var(--hp-bg-tertiary) 100%);
+  background-size: 200% 100%;
+  animation: hp-shimmer 2s infinite;
+  border-radius: var(--hp-radius-md);
+}
+
+.hp-skeleton-text {
+  height: 1rem;
+  margin-bottom: var(--hp-spacing-sm);
+}
+
+.hp-skeleton-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.hp-skeleton-card {
+  height: 12rem;
+  border-radius: var(--hp-radius-lg);
+}

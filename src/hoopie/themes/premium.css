@@ -1,0 +1,13 @@
+/* experimental */
+[data-theme="premium"] {
+  --hp-accent-primary: #9333ea;
+  --hp-accent-secondary: #be185d;
+  --hp-accent-tertiary: #7c3aed;
+
+  --hp-brand-500: #9333ea;
+  --hp-brand-600: #7e22ce;
+  --hp-brand-700: #6b21a8;
+
+  --hp-shadow-glow: 0 0 40px rgba(147, 51, 234, 0.3);
+  --hp-shadow-glow-accent: 0 0 50px rgba(190, 24, 93, 0.25);
+}

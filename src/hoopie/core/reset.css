@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--hp-font-family);
+  font-size: 1rem;
+  line-height: var(--hp-line-height-normal);
+  color: var(--hp-text-primary);
+  background-color: var(--hp-bg-primary);
+  transition: background-color var(--hp-transition-base), color var(--hp-transition-base);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
+  border: none;
+}
+
+a {
+  color: var(--hp-accent);
+  text-decoration: none;
+  transition: color var(--hp-transition-fast);
+}
+
+a:hover {
+  color: var(--hp-accent-dark);
+}
+
+/* accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
