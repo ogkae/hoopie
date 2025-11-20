@@ -33,9 +33,9 @@ cd hoopie
 
 ### File structure
 
-components belong in \`src/hoopie/components/\`
+components belong in `./src/hoopie/components/`
 
-core utilities in \`src/hoopie/core/\`
+core utilities in `./src/hoopie/core/`
 
 each file focuses on single responsibility
 
@@ -43,14 +43,14 @@ each file focuses on single responsibility
 
 when creating new components:
 
-1. create file in \`src/hoopie/components/component-name.css\`
+1. create file in `./src/hoopie/components/component-name.css`
 2. use bem naming structure consistently
 3. include all variant states
 4. support dark mode with automatic detection
 5. add animation and transition support
 6. ensure keyboard navigation ready
 7. test screen reader compatibility
-8. update \`src/hoopie/index.css\` imports
+8. update `./src/hoopie/index.css` imports
 
 example component:
 
@@ -86,9 +86,9 @@ example component:
 
 update documentation when adding features:
 
-- `README.md\` - component usage and examples
-- `CUSTOMIZATION.md\` - theming and variable changes
-- `CONTRIBUTING.md\` - development guidelines
+- `README.md` - component usage and examples
+- `CUSTOMIZATION.md` - theming and variable changes
+- `CONTRIBUTING.md` - development guidelines
 - inline css comments for complex logic
 
 ## Testing requirements
