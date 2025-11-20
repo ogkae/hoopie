@@ -1,285 +1,264 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="premium">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="hoopie - lightweight css framework by ogkae">
+        <meta name="theme-color" content="#0f172a">
+        <title>Hoopie — lightweight css framework</title>
+        <!-- MAIN FRAMEWORK CSS -->
+        <link rel="stylesheet" href="./src/hoopie/index.css">
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/kl1-monosans');
 
-  <meta name="description" content="hoopie - lightweight css framework by ogkae">
-  <meta name="theme-color" content="#0f172a">
-  <title>Hoopie — lightweight css framework</title>
+            /* RESET */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-  <!-- MAIN FRAMEWORK CSS -->
-  <link rel="stylesheet" href="./src/hoopie/index.css">
+            body {
+                font-family: var(--hp-font-sans);
+                background: var(--hp-bg-primary);
+                color: var(--hp-text-primary);
+                line-height: var(--hp-lh-relaxed);
+            }
 
-  <style>
-    @import url('https://fonts.cdnfonts.com/css/kl1-monosans');
+            .container {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: var(--hp-spacing-2xl) var(--hp-spacing-lg);
+            }
 
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+            /* HERO */
+            .hero {
+                padding: var(--hp-spacing-4xl) var(--hp-spacing-lg);
+                display: grid;
+                gap: var(--hp-spacing-3xl);
+                align-items: center;
+            }
 
-    body {
-      font-family: var(--hp-font-sans);
-      background: var(--hp-bg-primary);
-      color: var(--hp-text-primary);
-      line-height: var(--hp-lh-relaxed);
-    }
+            /* TITLE WITH BREATH ANIMATION */
+            .hero-title {
+                font-family: 'MonoAlphabet', sans-serif;
+                font-size: clamp(80px, 12vw, 150px);
+                background: linear-gradient(135deg, var(--hp-accent-primary), var(--hp-accent-secondary));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: breathe 4s ease-in-out infinite;
+            }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: var(--hp-spacing-2xl) var(--hp-spacing-lg);
-    }
+            @keyframes breathe {
 
-    /* HERO */
-    .hero {
-      padding: var(--hp-spacing-4xl) var(--hp-spacing-lg);
-      display: grid;
-      gap: var(--hp-spacing-3xl);
-      align-items: center;
-    }
+                0%,
+                100% {
+                    font-variation-settings: "wght"200;
+                }
 
-    /* TITLE WITH BREATH ANIMATION */
-    .hero-title {
-      font-family: 'MonoAlphabet', sans-serif;
-      font-size: clamp(80px, 12vw, 150px);
-      background: linear-gradient(135deg, var(--hp-accent-primary), var(--hp-accent-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+                50% {
+                    font-variation-settings: "wght"900;
+                }
+            }
 
-      animation: breathe 4s ease-in-out infinite;
-    }
+            .hero p {
+                color: var(--hp-text-secondary);
+                margin-top: var(--hp-spacing-md);
+                max-width: 550px;
+                font-size: 1.1rem;
+                line-height: 1.7;
+            }
 
-    @keyframes breathe {
-      0%, 100% { font-variation-settings: "wght" 200; }
-      50% { font-variation-settings: "wght" 900; }
-    }
+            .c-url {
+                color: #cc16cc;
+                text-decoration: none;
+            }
 
-    .hero p {
-      color: var(--hp-text-secondary);
-      margin-top: var(--hp-spacing-md);
-      max-width: 550px;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
+            .c-url:hover {
+                text-decoration: underline;
+                COLOR: #cc16cc;
+                font-synthesis: inherit;
+            }
 
-    .c-url {
-      color: #cc16cc;
-      text-decoration: none;
-    }
+            /* FEATURES SECTION */
+            .features {
+                background: var(--hp-bg-secondary);
+                padding: var(--hp-spacing-4xl) 0;
+            }
 
-    .c-url:hover {
-      text-decoration: underline;
-      COLOR:#cc16cc;
-      font-synthesis: inherit;
-    }
+            .features-grid {
+                display: grid;
+                gap: var(--hp-spacing-xl);
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
 
-    /* FEATURES SECTION */
-    .features {
-      background: var(--hp-bg-secondary);
-      padding: var(--hp-spacing-4xl) 0;
-    }
+            .feature-item {
+                background: var(--hp-bg-primary);
+                border: 1px solid var(--hp-border);
+                border-radius: var(--hp-radius-lg);
+                padding: var(--hp-spacing-xl);
+                transition: var(--hp-transition-md);
+            }
 
-    .features-grid {
-      display: grid;
-      gap: var(--hp-spacing-xl);
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
+            .feature-item:hover {
+                border-color: var(--hp-accent-primary);
+                box-shadow: var(--hp-shadow-md);
+                transform: translateY(-4px);
+            }
 
-    .feature-item {
-      background: var(--hp-bg-primary);
-      border: 1px solid var(--hp-border);
-      border-radius: var(--hp-radius-lg);
-      padding: var(--hp-spacing-xl);
-      transition: var(--hp-transition-md);
-    }
+            .feature-icon {
+                font-size: var(--hp-text-3xl);
+                margin-bottom: var(--hp-spacing-sm);
+            }
 
-    .feature-item:hover {
-      border-color: var(--hp-accent-primary);
-      box-shadow: var(--hp-shadow-md);
-      transform: translateY(-4px);
-    }
+            /* COMPONENT GRID */
+            .components-grid {
+                display: grid;
+                gap: var(--hp-spacing-2xl);
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
 
-    .feature-icon {
-      font-size: var(--hp-text-3xl);
-      margin-bottom: var(--hp-spacing-sm);
-    }
+            .component-card {
+                background: var(--hp-bg-secondary);
+                border: 1px solid var(--hp-border);
+                border-radius: var(--hp-radius-lg);
+                padding: var(--hp-spacing-2xl);
+            }
 
-    /* COMPONENT GRID */
-    .components-grid {
-      display: grid;
-      gap: var(--hp-spacing-2xl);
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
+            .component-card h3 {
+                margin-bottom: var(--hp-spacing-lg);
+                font-weight: var(--hp-fw-bold);
+            }
 
-    .component-card {
-      background: var(--hp-bg-secondary);
-      border: 1px solid var(--hp-border);
-      border-radius: var(--hp-radius-lg);
-      padding: var(--hp-spacing-2xl);
-    }
+            .demo-flex {
+                display: flex;
+                flex-direction: column;
+                gap: var(--hp-spacing-md);
+            }
 
-    .component-card h3 {
-      margin-bottom: var(--hp-spacing-lg);
-      font-weight: var(--hp-fw-bold);
-    }
+            footer {
+                margin-top: var(--hp-spacing-4xl);
+                padding: var(--hp-spacing-3xl) 0;
+                background: var(--hp-bg-inverse);
+                color: var(--hp-text-inverse);
+                text-align: center;
+            }
 
-    .demo-flex {
-      display: flex;
-      flex-direction: column;
-      gap: var(--hp-spacing-md);
-    }
-
-    footer {
-      margin-top: var(--hp-spacing-4xl);
-      padding: var(--hp-spacing-3xl) 0;
-      background: var(--hp-bg-inverse);
-      color: var(--hp-text-inverse);
-      text-align: center;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: var(--hp-spacing-xl);
-      justify-content: center;
-      margin-top: var(--hp-spacing-lg);
-      flex-wrap: wrap;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO -->
-  <section class="hero container">
-    <div>
-      <img align="right" height="330"
-        src="https://i.imgur.com/pUjP49M.png"/>
-
-      <h1 class="hero-title">hoopie</h1>
-
-      <p>
-        a lightweight and modular css framework built for fun and for learning.
-        made by ogkae; not a company, just someone who enjoys building clean ui tools.
-        <br><br>
-        <a class="c-url" href="https://github.com/ogkae/hoopie">
-          go to official repo
-        </a>
-      </p>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="container">
-      <h2 class="hp-h2" style="text-align:center; margin-bottom:var(--hp-spacing-3xl);">
-        what’s inside?
-      </h2>
-
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">✨</div>
-          <h3 class="hp-h4">smooth animations</h3>
-          <p>simple, responsive and gpu-accelerated animations ready to use.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">🎨</div>
-          <h3 class="hp-h4">themes & variables</h3>
-          <p>customize colors, radius, shadows and more using css variables.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">📦</div>
-          <h3 class="hp-h4">modular structure</h3>
-          <p>import only what you need: buttons, cards, navbars, badges, effects...</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon">⚡</div>
-          <h3 class="hp-h4">responsive utilities</h3>
-          <p>spacing, grid, visibility and layout helpers built-in.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPONENTS -->
-  <section class="container" style="margin-top: var(--hp-spacing-4xl);">
-    <h2 class="hp-h2" style="text-align:center; margin-bottom:var(--hp-spacing-3xl);">
-      components
-    </h2>
-
-    <div class="components-grid">
-
-      <!-- BUTTONS -->
-      <div class="component-card">
-        <h3>buttons</h3>
-        <div class="demo-flex">
-          <button class="hp-btn hp-btn-primary">primary</button>
-          <button class="hp-btn hp-btn-secondary">secondary</button>
-          <button class="hp-btn hp-btn-outline-primary">outline</button>
-          <button class="hp-btn hp-btn-gradient">gradient</button>
-        </div>
-      </div>
-
-      <!-- BADGES -->
-      <div class="component-card">
-        <h3>badges</h3>
-        <div class="demo-flex" style="flex-direction:row; flex-wrap:wrap;">
-          <span class="hp-badge hp-badge-primary">primary</span>
-          <span class="hp-badge hp-badge-success">success</span>
-          <span class="hp-badge hp-badge-warning">warning</span>
-          <span class="hp-badge hp-badge-error">error</span>
-        </div>
-      </div>
-
-      <!-- CARDS -->
-      <div class="component-card">
-        <h3>cards</h3>
-        <div class="demo-flex">
-          <div class="hp-card hp-card-elevated">
-            <strong>elevated</strong>
-            <p class="hp-body-sm">shadowed container</p>
-          </div>
-          <div class="hp-card hp-card-ghost">
-            <strong>ghost</strong>
-            <p class="hp-body-sm">minimal, clean card</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ALERTS -->
-      <div class="component-card">
-        <h3>alerts</h3>
-        <div class="demo-flex" style="gap:0.5rem;">
-          <div class="hp-alert hp-alert-success">success message</div>
-          <div class="hp-alert hp-alert-warning">warning message</div>
-        </div>
-      </div>
-
-      <!-- SPINNERS -->
-      <div class="component-card">
-        <h3>spinners</h3>
-        <div class="demo-flex" style="flex-direction:row; gap:1.5rem;">
-          <div class="hp-spinner hp-spinner-sm"></div>
-          <div class="hp-spinner"></div>
-          <div class="hp-spinner hp-spinner-lg"></div>
-        </div>
-      </div>
-
-      <!-- SOCIAL ICONS -->
-      <div class="component-card">
-        <h3>social icons</h3>
-        <div class="demo-flex" style="flex-direction:row; gap:0.5rem;">
-          <a class="hp-social-icon hp-social-icon--twitter">X</a>
-          <a class="hp-social-icon hp-social-icon--github">GH</a>
-          <a class="hp-social-icon hp-social-icon--linkedin">IN</a>
-          <a class="hp-social-icon hp-social-icon--discord">DC</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</body>
+            .footer-links {
+                display: flex;
+                gap: var(--hp-spacing-xl);
+                justify-content: center;
+                margin-top: var(--hp-spacing-lg);
+                flex-wrap: wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- HERO -->
+        <section class="hero container">
+            <div>
+                <img align="right" height="330" src="https://i.imgur.com/pUjP49M.png" />
+                <h1 class="hero-title">hoopie</h1>
+                <p> a lightweight and modular css framework built for fun and for learning. made by ogkae; not a company, just someone who enjoys building clean ui tools. <br>
+                    <br>
+                    <a class="c-url" href="https://github.com/ogkae/hoopie"> go to official repo </a>
+                </p>
+            </div>
+        </section>
+        <!-- FEATURES -->
+        <section class="features">
+            <div class="container">
+                <h2 class="hp-h2" style="text-align:center; margin-bottom:var(--hp-spacing-3xl);"> what’s inside? </h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <h3 class="hp-h4">smooth animations</h3>
+                        <p>simple, responsive and gpu-accelerated animations ready to use.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="hp-h4">themes & variables</h3>
+                        <p>customize colors, radius, shadows and more using css variables.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📦</div>
+                        <h3 class="hp-h4">modular structure</h3>
+                        <p>import only what you need: buttons, cards, navbars, badges, effects...</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="hp-h4">responsive utilities</h3>
+                        <p>spacing, grid, visibility and layout helpers built-in.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COMPONENTS -->
+        <section class="container" style="margin-top: var(--hp-spacing-4xl);">
+            <h2 class="hp-h2" style="text-align:center; margin-bottom:var(--hp-spacing-3xl);"> components </h2>
+            <div class="components-grid">
+                <!-- BUTTONS -->
+                <div class="component-card">
+                    <h3>buttons</h3>
+                    <div class="demo-flex">
+                        <button class="hp-btn hp-btn-primary">primary</button>
+                        <button class="hp-btn hp-btn-secondary">secondary</button>
+                        <button class="hp-btn hp-btn-outline-primary">outline</button>
+                        <button class="hp-btn hp-btn-gradient">gradient</button>
+                    </div>
+                </div>
+                <!-- BADGES -->
+                <div class="component-card">
+                    <h3>badges</h3>
+                    <div class="demo-flex" style="flex-direction:row; flex-wrap:wrap;">
+                        <span class="hp-badge hp-badge-primary">primary</span>
+                        <span class="hp-badge hp-badge-success">success</span>
+                        <span class="hp-badge hp-badge-warning">warning</span>
+                        <span class="hp-badge hp-badge-error">error</span>
+                    </div>
+                </div>
+                <!-- CARDS -->
+                <div class="component-card">
+                    <h3>cards</h3>
+                    <div class="demo-flex">
+                        <div class="hp-card hp-card-elevated">
+                            <strong>elevated</strong>
+                            <p class="hp-body-sm">shadowed container</p>
+                        </div>
+                        <div class="hp-card hp-card-ghost">
+                            <strong>ghost</strong>
+                            <p class="hp-body-sm">minimal, clean card</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ALERTS -->
+                <div class="component-card">
+                    <h3>alerts</h3>
+                    <div class="demo-flex" style="gap:0.5rem;">
+                        <div class="hp-alert hp-alert-success">success message</div>
+                        <div class="hp-alert hp-alert-warning">warning message</div>
+                    </div>
+                </div>
+                <!-- SPINNERS -->
+                <div class="component-card">
+                    <h3>spinners</h3>
+                    <div class="demo-flex" style="flex-direction:row; gap:1.5rem;">
+                        <div class="hp-spinner hp-spinner-sm"></div>
+                        <div class="hp-spinner"></div>
+                        <div class="hp-spinner hp-spinner-lg"></div>
+                    </div>
+                </div>
+                <!-- SOCIAL ICONS -->
+                <div class="component-card">
+                    <h3>social icons</h3>
+                    <div class="demo-flex" style="flex-direction:row; gap:0.5rem;">
+                        <a class="hp-social-icon hp-social-icon--twitter">X</a>
+                        <a class="hp-social-icon hp-social-icon--github">GH</a>
+                        <a class="hp-social-icon hp-social-icon--linkedin">IN</a>
+                        <a class="hp-social-icon hp-social-icon--discord">DC</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>
