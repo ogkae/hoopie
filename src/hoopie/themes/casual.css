@@ -1,0 +1,21 @@
+[data-theme="casual"] {
+  --hp-primary: #5c7cfa;        
+  --hp-accent: #4dabf7;       
+  --hp-secondary: #74c0fc;    
+
+  --hp-success: #69db7c;
+  --hp-warning: #f8c572;
+  --hp-error: #ff6b6b;
+  --hp-info: #63e6be;
+
+  --hp-bg-primary: #f8f9fb;
+  --hp-bg-secondary: #eef1f6;
+  --hp-bg-tertiary: #e4e8ef;
+
+  --hp-text-primary: #1c1c28;
+  --hp-text-secondary: #4b4b59;
+  --hp-text-tertiary: #7a7a88;
+
+  --hp-border: #d5d8e0;
+  --hp-shadow-glass: 0 8px 24px rgba(92, 124, 250, 0.12);
+}
